@@ -12,9 +12,13 @@ import {
 // import firebase from 'firebase/app';
 // import 'firebase/auth';
 import { useNavigation } from '@react-navigation/native';
-import axios from 'axios';
-// import { AuthenticationToken, LoginManager } from 'react-native-fbsdk-next';
+import axios from 'axios'
+import { AccessToken, LoginButton } from 'react-native-fbsdk-next';
+import { Settings } from 'react-native-fbsdk-next';
 
+// Setting the facebook app id using setAppID
+// Remember to set CFBundleURLSchemes in Info.plist on iOS if needed
+Settings.setAppID('24542128472043859');
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -145,10 +149,23 @@ export default function Login() {
             <TouchableOpacity onPress={handleLogin} style={styles.button}>
                 <Text style={styles.buttonText}>Login</Text>
             </TouchableOpacity>
-            <Button
-                title="Facebook Sign-In"
-                onPress={() => onFacebookButtonPress().then(() => console.log('Signed in with Facebook!'))}
-            />
+            <LoginButton
+                onLoginFinished={
+                    (error, result) => {
+                        if (error) {
+                            console.log("login has error: " + result.error);
+                        } else if (result.isCancelled) {
+                            console.log("login is cancelled.");
+                        } else {
+                            AccessToken.getCurrentAccessToken().then(
+                                (data) => {
+                                    console.log(data.accessToken.toString())
+                                }
+                            )
+                        }
+                    }
+                }
+                onLogoutFinished={() => console.log("logout.")} />
         </ImageBackground>
     );
 }

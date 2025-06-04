@@ -1,36 +1,52 @@
 {
-  "expo": {
-    "name": "LiberiPerDavvero",
-    "slug": "LiberiPerDavvero",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "com.liberiperdavvero.LiberiPerDavvero"
-    },
-    "android": {
-      "package": "com.liberiperdavvero.LiberiPerDavvero",
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "c384efde-f7f9-447b-b248-bd3e0aa06e97"
-      }
+    "expo": {
+        "name": "LiberiPerDavvero",
+        "slug": "LiberiPerDavvero",
+        "version": "1.0.0",
+        "orientation": "portrait",
+        "icon": "./assets/icon.png",
+        "userInterfaceStyle": "light",
+        "newArchEnabled": true,
+        "splash": {
+            "image": "./assets/splash-icon.png",
+            "resizeMode": "contain",
+            "backgroundColor": "#ffffff"
+        },
+        "ios": {
+            "supportsTablet": true,
+            "bundleIdentifier": "com.liberiperdavvero.LiberiPerDavvero"
+        },
+        "android": {
+            "package": "com.liberiperdavvero.LiberiPerDavvero",
+            "adaptiveIcon": {
+                "foregroundImage": "./assets/adaptive-icon.png",
+                "backgroundColor": "#ffffff"
+            },
+            "edgeToEdgeEnabled": true
+        },
+        "web": {
+            "favicon": "./assets/favicon.png"
+        },
+        "extra": {
+            "eas": {
+                "projectId": "c384efde-f7f9-447b-b248-bd3e0aa06e97"
+            }
+        },
+        "plugins": [
+            [
+                "react-native-fbsdk-next",
+                {
+                    "appID": "24542128472043859",
+                    "clientToken": "23cbe055e08e297e8bebbe4a4f36a185",
+                    "displayName": "Liberi Per Davvero",
+                    "scheme": "fb24542128472043859",
+                    "advertiserIDCollectionEnabled": false,
+                    "autoLogAppEventsEnabled": false,
+                    "isAutoInitEnabled": true,
+                    "iosUserTrackingPermission": "This identifier will be used to deliver personalized ads to you."
+                }
+            ],
+            "expo-tracking-transparency"
+        ]
     }
-  }
 }
