@@ -1,0 +1,36 @@
+{
+  "expo": {
+    "name": "LiberiPerDavvero",
+    "slug": "LiberiPerDavvero",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.liberiperdavvero.LiberiPerDavvero"
+    },
+    "android": {
+      "package": "com.liberiperdavvero.LiberiPerDavvero",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c384efde-f7f9-447b-b248-bd3e0aa06e97"
+      }
+    }
+  }
+}
